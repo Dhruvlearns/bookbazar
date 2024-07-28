@@ -6,16 +6,17 @@ import Sellyourbook from "./Pages/Sellyourbook";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-
+import Nav from "./Components/Nav";
 
 function App() {
   return (
     <div className="App">
     <h1> Book Bazar</h1>
+    <Nav/>
     <div>
       
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Myaccount" element={<Myaccount />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Sellyourbook" element={<Sellyourbook/>} />
