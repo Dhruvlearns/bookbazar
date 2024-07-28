@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MainContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap; 
+  height: 100vh;
+  width: 100%;
+  /* border: 2px solid blue; */
+}
+.tickmark {
+  border: 1px solid rgba(0, 0, 0, 0.255);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.127);
+  border-radius: 1%;
+  width: 18%;  
+  height: auto; 
+  margin: 10px; 
+  box-sizing: border-box; 
 }
 
-.App-link {
-  color: #61dafb;
+.heading{
+  color: rgb(84, 84, 223);
+  font-size: 22px;
+  margin-bottom: 28px;
+  margin-top: 18px;
+}
+.horizontalRule{
+  
+    border: 0; 
+    height: 2px; 
+    background-color: #1b1a1904; 
+    margin: 20px auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.127); 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+label {
+  font-size: 15px; 
+  text-align: center;
+
+}
+
+.check {
+  width: 20px;  
+  height: 20px;
+  margin-right: 10px; 
+  margin-bottom: 15px;
+ 
+  
+  
+}
+.tickmark1{
+  margin: 10px;
+  
+}
+
+.lb1{
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+
+.photo {
+  /* border: 2px solid rgb(0, 0, 0); */
+  width: 79%;  
+  height: auto; 
+  display: flex;
+  box-sizing: border-box; 
+  overflow: hidden;
+  position: relative;
+  flex-wrap: wrap; 
+  
+}
+.Photoimg {
+  width: 250px; 
+  margin: 8px 14px; 
+  /* border: 1px solid #ccc;  */
+  padding: 3px; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  
+}
+
+.img{
+  height: 200px;
+  width: 140px;
+  padding-right: 28px;
+  /* display: block; */
+}
+
+.price{
+  font-size: 20px;
+  margin-top: 0px;
+  margin: 0; 
+  padding: 0;
+  color: rgb(0, 132, 255);
+  
+}
+.description{
+  margin: 0; 
+  padding: 0;
+}
+
+.title{
+  margin: 0; 
+  padding: 0;
+}
+.btn{
+  color: azure;
+  background-color: black;
+  margin-top: 3px;
+  width: 80px;
+  height: 30px;
 }
