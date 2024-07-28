@@ -1,0 +1,9 @@
+.Nav{
+    color: crimson;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    background-color: #3caf7b;
+    color: #fff;
+}

@@ -8,12 +8,15 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import PhotoData from "./PhotoData"; 
 import Photo from "./Photo";
+import Nav from "./Components/Nav";
+
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <h1>Book Bazar</h1>
+        <Nav/>
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/Myaccount" element={<Myaccount />} />

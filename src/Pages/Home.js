@@ -1,6 +1,7 @@
 import React from 'react'
 import Maincontent from '../component/Maincontent'
 
+
 const Home = () => {
   return (
     <div>
