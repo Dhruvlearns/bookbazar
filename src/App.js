@@ -9,6 +9,8 @@ import Signup from "./Pages/Signup";
 import PhotoData from "./PhotoData"; 
 import Photo from "./Photo";
 import Nav from "./Components/Nav";
+import Welcome from "./Pages/Welcome";
+import Upload from "./Components/upload";
 
 
 export default function App() {
@@ -18,10 +20,11 @@ export default function App() {
         <h1>Book Bazar</h1>
         <Nav/>
         <Routes>
+          <Route path="/" element={<Welcome />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Myaccount" element={<Myaccount />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/Sellyourbook" element={<Sellyourbook />} />
+          <Route path="/Sellyourbook" element={<Upload />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Login" element={<Login />} />
         </Routes>

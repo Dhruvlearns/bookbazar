@@ -96,6 +96,7 @@ const Sellyourbook = () => {
         <input
           type="file"
           name="photos"
+          accept='image/*'
           onChange={handleChange}
         />
         {errors.photos && <span className="error">{errors.photos}</span>}

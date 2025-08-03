@@ -1,65 +1,52 @@
-import React, { useState } from 'react';
-import "../Pages/Login.css"; // Ensure this path is correct
-
+import React, { useState } from 'react'
+import { auth } from '../firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import "../Pages/Login.css"
 const Login = () => {
-  const [formData, setFormData] = useState({
-    identifier: '',
-    password: ''
-  });
 
-  const [errors, setErrors] = useState({});
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
+  const navigate = useNavigate();
 
-  const validate = () => {
-    let formErrors = {};
-    if (!formData.identifier) formErrors.identifier = 'Email address or phone number is required';
-    if (!formData.password) formErrors.password = 'Password is required';
-    return formErrors;
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const formErrors = validate();
-    if (Object.keys(formErrors).length === 0) {
-      // Submit form data
-      console.log('Form submitted:', formData);
-    } else {
-      setErrors(formErrors);
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      console.log(userCredential);
+      const user = userCredential.user;
+      localStorage.setItem('token', user.accessToken);
+      localStorage.setItem('user', JSON.stringify(user));
+      navigate("/");
+    } catch (error) {
+      console.error(error);
     }
-  };
+  }
 
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label>Email Address/Phone Number:</label>
+    <div>
+      <h1>Login Page</h1>
+      <form onSubmit={handleSubmit} className='login-form'>
         <input
-          type="text"
-          name="identifier"
-          value={formData.identifier}
-          onChange={handleChange}
+          type="email"
+          placeholder="Your Email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
-        {errors.identifier && <span className="error">{errors.identifier}</span>}
-      </div>
-      <div className="form-group">
-        <label>Password:</label>
         <input
           type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
+          placeholder="Your Password"
+          required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
-        {errors.password && <span className="error">{errors.password}</span>}
-      </div>
-      <button type="submit" className="submit-button">Login</button>
-    </form>
-  );
-};
+        <button type="submit" className='login-button'>Login</button>
+      </form>
+      <p>Need to Signup? <Link to="/signup">Create Account</Link></p>
+    </div>
+  )
+}
 
-export default Login;
+export default Login
