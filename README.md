@@ -1,3 +1,31 @@
+
+##🌱 Why BookBazar?
+Eco-Friendly: Promotes reuse and reduces paper waste.
+
+Budget-Friendly: Helps parents and students save on textbook costs.
+
+Community-Centric: Builds a local network of trust and collaboration.
+
+Broker-Free: Direct peer-to-peer exchange, no middlemen.
+
+##🚀 Features #
+Browse available books by school, grade, or subject
+
+Post books for sale or donation with ease
+
+Connect directly with nearby students or parents
+
+Real-time updates and notifications
+
+Clean, intuitive UI built with React
+
+# 🛠 Tech Stack
+Frontend: React.js
+
+Backend: (Coming soon or specify if added)
+
+Deployment: Create React App
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
