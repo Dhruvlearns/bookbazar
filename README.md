@@ -1,5 +1,5 @@
 
-#🌱 Why BookBazar?
+# 🌱 Why BookBazar?
 Eco-Friendly: Promotes reuse and reduces paper waste.
 
 Budget-Friendly: Helps parents and students save on textbook costs.
@@ -8,7 +8,7 @@ Community-Centric: Builds a local network of trust and collaboration.
 
 Broker-Free: Direct peer-to-peer exchange, no middlemen.
 
-#🚀 Features #
+# 🚀 Features
 Browse available books by school, grade, or subject
 
 Post books for sale or donation with ease
